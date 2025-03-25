@@ -1,4 +1,4 @@
-cmd install bl.js const axios = require("axios");
+const axios = require("axios");
 
 const dApi = async () => {
   const base = await axios.get(
@@ -101,7 +101,7 @@ module.exports.onChat = async ({ api, event }) => {
 
     api.sendMessage(
       {
-        body: ` 🎥 Successfully downloaded the video!\n🔖 Platform: ${platform}`,
+        body: ` 🎥: Successfully downloaded the video!\n📜: Platform: ${platform}`,
         attachment: [videoStream.data],
       },
       threadID,
